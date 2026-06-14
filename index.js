@@ -79,7 +79,9 @@ if (!fs.existsSync(CREDS)) {
   }
   
   const decoded = Buffer.from(session.substring(7), 'base64').toString('utf8');
-  JSON.parse(decoded);
+  const raw = fs.readFileSync(file, 'utf8');
+  console.log(raw.substring(0, 200));
+  const data = JSON.parse(raw);
   
   fs.mkdirSync(AUTH_DIR, { recursive: true });
   fs.writeFileSync(CREDS, decoded, { encoding: 'utf8' });
