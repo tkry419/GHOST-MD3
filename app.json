@@ -1,0 +1,21 @@
+{
+  "name": "GHOST-MD",
+  "description": "GHOST-MD WhatsApp bot made by SwiftBot Official",
+  "logo": "https://files.catbox.moe/c8zedg.jpg",
+  "keywords": ["bot","GHOST-MD","GHOST-MD"],
+  "success_url": "/",
+
+  "env": {
+    "SESSION_ID": {
+        "description": "Put the GHOST-MD session-id here.",
+        "required": true
+    }
+},
+
+"buildpacks": [
+    {
+        "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+],
+"stack": "heroku-24"
+}
