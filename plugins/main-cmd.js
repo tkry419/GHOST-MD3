@@ -4,7 +4,7 @@ const { runtime } = require('../lib/functions')
 const hrs = new Date().getHours({ timeZone: 'Asia/Colombo' })
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 const axios = require('axios');
-const { fakevCard } = require('../lib/fakevCard.js');
+const { fakevCard } = require('../lib/fakevCard');
 const bot = require('../lib/bot')
 const config = require('../setting')
 //========================================About==================================================
@@ -239,7 +239,7 @@ menu[commands[i].category] += `*│*❯❯◦ ${commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = `🤩 *HELLOW* *${pushname}*
+let madeMenu = `🤩 *HELLO* *${pushname}*
 > WELLCOME TO GHOST-MD 🪀
 
 ╭─「 ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ 」
@@ -314,7 +314,7 @@ cmd({
 async (conn, mek, m, { from, pushname, reply, contextInfo }) => {
     try {
         let desc = `
-🤩 *HELLOW* *${pushname}*
+🤩 *HELLO* *${pushname}*
 > WELLCOME TO GHOST-MD 🪀
 
 ╭─「 ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ 」
@@ -691,7 +691,7 @@ cmd({
 async(conn, mek, m,{from, l, reply}) => {
 try{
     var inital = new Date().getTime();
-    let ping = await conn.sendMessage(from , { text: '*_KIRA-MD..._*'  }, { quoted: mek } )
+    let ping = await conn.sendMessage(from , { text: '*_GHOST-MD..._*'  }, { quoted: mek } )
     var final = new Date().getTime();
     await conn.sendMessage(from, { delete: ping.key })
         return await conn.sendMessage(from , { text: '*🔥Pong*\n *' + (final - inital) + ' ms* '  }, { quoted: mek } )
