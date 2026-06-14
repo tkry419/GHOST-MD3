@@ -78,14 +78,12 @@ if (!fs.existsSync(CREDS)) {
     process.exit(1);
   }
   
-  const decoded = Buffer.from(session.substring(7), 'base64').toString('utf8');
-  const raw = fs.readFileSync(file, 'utf8');
-  console.log(raw.substring(0, 200));
-  const data = JSON.parse(raw);
-  
-  fs.mkdirSync(AUTH_DIR, { recursive: true });
-  fs.writeFileSync(CREDS, decoded, { encoding: 'utf8' });
-  console.log("♻️ GHOST-MD session restored successfully");
+  const decoded = Buffer.from(session.substring(9), 'base64').toString('utf8');
+
+fs.mkdirSync(AUTH_DIR, { recursive: true });
+fs.writeFileSync(CREDS, decoded, 'utf8');
+
+console.log("♻️ GHOST-MD session restored successfully");
 }
 
 // Load group settings from file if exists
