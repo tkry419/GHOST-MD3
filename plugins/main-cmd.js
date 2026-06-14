@@ -4,7 +4,7 @@ const { runtime } = require('../lib/functions')
 const hrs = new Date().getHours({ timeZone: 'Asia/Colombo' })
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 const axios = require('axios');
-const { fakevCard } = require('../lib/fakevCard');
+const { fakevCard } = require('../lib/fakevCard.js');
 const bot = require('../lib/bot')
 const config = require('../setting')
 //========================================About==================================================
