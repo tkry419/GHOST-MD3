@@ -8,7 +8,7 @@
 <img src = "https://files.catbox.moe/c8zedg.jpg"  width="300" height="200">
 </img>
  <p align="center">
-  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=ff00ab&center=true&vCenter=true&multiline=false&lines=GHOST+MD+WHATSAPP+BOT+MD" alt="">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=ff00ab&center=true&vCenter=true&multiline=false&lines=GHOST -+MD+WHATSAPP+BOT+MD" alt="">
    
 ## 𝐃𝐄𝐏𝐋𝐎𝐘 𝐒𝐄𝐓𝐔𝐏 ↕️
 
@@ -68,4 +68,40 @@ on:
       - main
   pull_request:
     branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start application
+      run: npm start
+```
+<a><img src='https://i.imgur.com/LyHic3i.gif'/>
+
+### Thank You Dear
+
+> DEVELOPER OF GHOST-MD 
+- [GHOST](https://github.com/tkry419)
+- Creator and Owner Of GHOST-MD
+
+---
+<a><img src='https://i.imgur.com/LyHic3i.gif'/>
 
